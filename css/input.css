@@ -1,3 +1,49 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer components{
+    .containervideo {
+        display:flex;
+        bg-color:white;
+        rounded:3px;
+        overflow:hidden;
+        width:30%;
+        flex-wrap: wrap;
+        height:auto;
+        margin-bottom:32px;
+        
+    }.profilvid{
+        display:flex;
+        width:100%;
+        
+    } .videoimg {
+        width:100%;
+        height:180px;
+    }
+    .avatarimg {
+        width:40px;
+        height:auto;
+    }
+    .rating-container {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .rating {
+      color: gold;
+      font-size: 18px;
+    }
+    .rating .fa-star {
+      margin-right: 2px;
+    }
+    .review {
+      color: #555;
+      font-size: 14px;
+    }
+    .price {
+      margin-left: auto;
+      color: green;
+      font-size: 18px;
+      font-weight: bold;
+    }
+}
