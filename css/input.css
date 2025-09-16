@@ -4,13 +4,15 @@
 @layer components{
     .containervideo {
         display:flex;
-        bg-color:white;
+        background-color:white;
         rounded:3px;
         overflow:hidden;
         width:30%;
         flex-wrap: wrap;
         height:auto;
+        padding:16px;
         margin-bottom:32px;
+        border-radius:8px;
         
     }.profilvid{
         display:flex;
