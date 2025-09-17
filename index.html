@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="overflow-x-hidden">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body class="bg-lightgray">
-<div class="px-10">
+<div class="px-2 md:px-10">
 <!--header-->
 <header class="bg-white fixed top-0 left-0 z-50 w-full">
   <div class="container mx-auto flex items-center justify-between px-4 h-14">
@@ -16,10 +16,10 @@
     <!-- Logo + Navbar -->
     <div class="flex items-center gap-8">
       <!-- Logo -->
-      <img src="img/logo3.png" alt="Logo" class="h-14 w-auto">
+      <img src="img/logo3.png" alt="Logo" class="h-10 md:h-14 w-auto">
       
       <!-- Navbar -->
-      <nav class="flex items-center gap-6">
+      <nav class="hidden md:flex items-center gap-6">
         <a href="#home" class="text-gray-700 font-medium hover:underline">Home</a>
         <a href="#project" class="text-gray-700 font-medium hover:underline">Project</a>
         <a href="#about" class="text-gray-700 font-medium hover:underline">About</a>
@@ -28,22 +28,44 @@
     </div>
 
     <!-- Profil -->
- <div class="flex items-center gap-2">
+ <div class="hidden md:flex items-center gap-2">
     <a href="#profil" class="text-gray-700 font-medium hover:underline">Profil</a>
   <img src="img/pp.png" alt="profil" class="h-10 w-10 rounded-lg object-cover">
-  
 </div>
 
+ <!-- Hamburger Mobile -->
+    <div class="md:hidden flex items-center">
+      <button id="hamburgerBtn" class="focus:outline-none">
+        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-white shadow-md">
+    <nav class="flex flex-col px-4 py-4 gap-4 items-end">
+      <div class="flex items-center gap-2 pt-2 border-b border-gray-200">
+        <a href="#profil" class="text-gray-700 font-medium hover:underline">Profil</a>
+        <img src="img/pp.png" alt="profil" class="h-10 w-10 rounded-lg object-cover">
+      </div>
+      <a href="#home" class="text-gray-700 font-medium hover:underline">Home</a>
+      <a href="#project" class="text-gray-700 font-medium hover:underline">Project</a>
+      <a href="#about" class="text-gray-700 font-medium hover:underline">About</a>
+      <a href="#contact" class="text-gray-700 font-medium hover:underline">Contact</a>
+      
+    </nav>
   </div>
 </header>
 
 
 <!--spot-->
-<section id="spotlight" class="pt-14 bg-black">
-    <div class="relative w-full h-64 flex items-center justify-center">
-      <img src="img/spot.jpg" alt="Spotlight" class="absolute inset-0 w-full h-full object-cover z-0">
-      <div class="absolute inset-0 bg-black bg-opacity-80 z-1"></div>
-      <div class="relative z-20 text-white text-center px-4">
+<section id="spotlight" class="pt-28 bg-white rounded-lg">
+    <div class="relative w-full  h-[500px] md:h-64 flex items-center justify-center rounded-lg">
+      <img src="img/spot.jpg" alt="Spotlight" class="rounded-lg absolute inset-0 w-full h-full object-cover z-0">
+      <div class="absolute rounded-lg inset-0 bg-black bg-opacity-80 z-1"></div>
+      <div class="relative z-20 text-white text-center px-3 md:px-4">
         <h2 class="text-3xl font-bold mb-2">Revolusi Pembelajaran: Temukan Ilmu Baru melalui Platform Video Interaktif!</h2>
         <p class="text-lg">Temukan ilmu baru yang menarik dan mendalam melalui koleksi video pembelajaran berkualitas tinggi. Tidak hanya itu, Anda juga dapat berpartisipasi dalam latihan interaktif yang akan meningkatkan pemahaman Anda.</p>
         <button class="px-2 h-12 mt-4 mx-auto bg-green-400 text-white hover:bg-green-600 font-semibold rounded-md">Temukan Video Course untuk Dipelajari!</button>
@@ -61,23 +83,26 @@
 </section>
 <!--mininav-->
 <section id="mininav" class="text-darkgray px-2">
-    <nav class="flex items-center gap-8 pt-12 font-semibold text-lg">
-        <a href="#SemuaKelas" class="text-darkgray  font-medium hover:underline hover:text-goldyellow hover:font-bold">Home</a>
-        <a href="#Pemasaran" class="text-darkgray font-medium hover:underline hover:text-goldyellow hover:font-bold">Project</a>
-        <a href="#Desain" class="text-darkgray font-medium hover:underline hover:text-goldyellow hover:font-bold">About</a>
-        <a href="#PengembanganDiri" class="text-darkgray font-medium hover:underline hover:text-goldyellow hover:font-bold">Contact</a>
-        <a href="#Bisnis" class="text-darkgray font-medium hover:underline hover:text-goldyellow hover:font-bold">Contact</a>
+    <nav class="flex flex-wrap items-center gap-8 pt-12 font-semibold text-lg">
+        <a href="#SemuaKelas" class="text-darkgray  font-medium hover:underline hover:text-goldyellow hover:font-bold">SemuaKelas</a>
+        <a href="#Pemasaran" class="text-darkgray font-medium hover:underline hover:text-goldyellow hover:font-bold">Pemasaran</a>
+        <a href="#Desain" class="text-darkgray font-medium hover:underline hover:text-goldyellow hover:font-bold">Desain</a>
+        <a href="#PengembanganDiri" class="text-darkgray font-medium hover:underline hover:text-goldyellow hover:font-bold">PengembanganDiri</a>
+        <a href="#Bisnis" class="text-darkgray font-medium hover:underline hover:text-goldyellow hover:font-bold">Bisnis</a>
       </nav>
 </section>
 <!--video course-->
 <section id="videocourse" class="w-full mt-10"> 
-  <div class="w-full flex flex-wrap justify-between">
-    <div class="containervideo ">
-      <img src="img/1.jpg" alt="draft1" class="videoimg">
-      <h3>Big 4 Auditor Financial Analyst</h3>
-      <p>Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik</p>
-      <div class="profilvid">
-        <img src="imgavatar1.jpg" alt="avatar1" class="avatarimg">
+  <div class="w-full md:flex flex-wrap justify-between">
+    <div class="containervideomobile md:containervideo ">
+      <img src="img/1.jpg" alt="draft1" class="w-1/3 box-border h-auto rounded-lg mr-4
+       md:videoimg">
+      <div class="w-3/5 md:flex md:w-full md:flex-wrap">
+      
+      <h3 class="font-bold md:w-full">Big 4 Auditor Financial Analyst</h3>
+      <p class="hidden md:flex">Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik</p>
+      
+        <img src="img/avatar1.png" alt="avatar1" class="avatarimg rounded-lg">
         <div>
         <h4>Jenna Ortega</h4>
         <p>Senior Accountant di <span class="font-semibold">gojek</span></p>
@@ -101,12 +126,15 @@
       </div>
     </div>
     
-    <div class="containervideo">
-      <img src="img/1.jpg" alt="draft1" class="videoimg">
-      <h3>Big 4 Auditor Financial Analyst</h3>
-      <p>Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik</p>
-      <div class="profilvid">
-        <img src="imgavatar1.jpg" alt="avatar1" class="avatarimg">
+    <div class="containervideomobile md:containervideo ">
+      <img src="img/1.jpg" alt="draft1" class="w-1/3 box-border h-auto rounded-lg mr-4
+       md:videoimg">
+      <div class="w-3/5 md:flex md:w-full md:flex-wrap">
+      
+      <h3 class="font-bold md:w-full">Big 4 Auditor Financial Analyst</h3>
+      <p class="hidden md:flex">Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik</p>
+      
+        <img src="img/avatar1.png" alt="avatar1" class="avatarimg rounded-lg">
         <div>
         <h4>Jenna Ortega</h4>
         <p>Senior Accountant di <span class="font-semibold">gojek</span></p>
@@ -130,12 +158,15 @@
       </div>
     </div>
 
-    <div class="containervideo">
-      <img src="img/1.jpg" alt="draft1" class="videoimg">
-      <h3>Big 4 Auditor Financial Analyst</h3>
-      <p>Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik</p>
-      <div class="profilvid">
-        <img src="imgavatar1.jpg" alt="avatar1" class="avatarimg">
+    <div class="containervideomobile md:containervideo ">
+      <img src="img/1.jpg" alt="draft1" class="w-1/3 box-border h-auto rounded-lg mr-4
+       md:videoimg">
+      <div class="w-3/5 md:flex md:w-full md:flex-wrap">
+      
+      <h3 class="font-bold md:w-full">Big 4 Auditor Financial Analyst</h3>
+      <p class="hidden md:flex">Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik</p>
+      
+        <img src="img/avatar1.png" alt="avatar1" class="avatarimg rounded-lg">
         <div>
         <h4>Jenna Ortega</h4>
         <p>Senior Accountant di <span class="font-semibold">gojek</span></p>
@@ -159,12 +190,15 @@
       </div>
     </div>
 
-    <div class="containervideo">
-      <img src="img/1.jpg" alt="draft1" class="videoimg">
-      <h3>Big 4 Auditor Financial Analyst</h3>
-      <p>Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik</p>
-      <div class="profilvid">
-        <img src="imgavatar1.jpg" alt="avatar1" class="avatarimg">
+    <div class="containervideomobile md:containervideo ">
+      <img src="img/1.jpg" alt="draft1" class="w-1/3 box-border h-auto rounded-lg mr-4
+       md:videoimg">
+      <div class="w-3/5 md:flex md:w-full md:flex-wrap">
+      
+      <h3 class="font-bold md:w-full">Big 4 Auditor Financial Analyst</h3>
+      <p class="hidden md:flex">Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik</p>
+      
+        <img src="img/avatar1.png" alt="avatar1" class="avatarimg rounded-lg">
         <div>
         <h4>Jenna Ortega</h4>
         <p>Senior Accountant di <span class="font-semibold">gojek</span></p>
@@ -188,12 +222,15 @@
       </div>
     </div>
 
-    <div class="containervideo">
-      <img src="img/1.jpg" alt="draft1" class="videoimg">
-      <h3>Big 4 Auditor Financial Analyst</h3>
-      <p>Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik</p>
-      <div class="profilvid">
-        <img src="imgavatar1.jpg" alt="avatar1" class="avatarimg">
+    <div class="containervideomobile md:containervideo ">
+      <img src="img/1.jpg" alt="draft1" class="w-1/3 box-border h-auto rounded-lg mr-4
+       md:videoimg">
+      <div class="w-3/5 md:flex md:w-full md:flex-wrap">
+      
+      <h3 class="font-bold md:w-full">Big 4 Auditor Financial Analyst</h3>
+      <p class="hidden md:flex">Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik</p>
+      
+        <img src="img/avatar1.png" alt="avatar1" class="avatarimg rounded-lg">
         <div>
         <h4>Jenna Ortega</h4>
         <p>Senior Accountant di <span class="font-semibold">gojek</span></p>
@@ -217,12 +254,15 @@
       </div>
     </div>
 
-    <div class="containervideo">
-      <img src="img/1.jpg" alt="draft1" class="videoimg">
-      <h3>Big 4 Auditor Financial Analyst</h3>
-      <p>Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik</p>
-      <div class="profilvid">
-        <img src="imgavatar1.jpg" alt="avatar1" class="avatarimg">
+    <div class="containervideomobile md:containervideo ">
+      <img src="img/1.jpg" alt="draft1" class="w-1/3 box-border h-auto rounded-lg mr-4
+       md:videoimg">
+      <div class="w-3/5 md:flex md:w-full md:flex-wrap">
+      
+      <h3 class="font-bold md:w-full">Big 4 Auditor Financial Analyst</h3>
+      <p class="hidden md:flex">Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik</p>
+      
+        <img src="img/avatar1.png" alt="avatar1" class="avatarimg rounded-lg">
         <div>
         <h4>Jenna Ortega</h4>
         <p>Senior Accountant di <span class="font-semibold">gojek</span></p>
@@ -246,12 +286,46 @@
       </div>
     </div>
 
-    <div class="containervideo">
-      <img src="img/1.jpg" alt="draft1" class="videoimg">
-      <h3>Big 4 Auditor Financial Analyst</h3>
-      <p>Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik</p>
-      <div class="profilvid">
-        <img src="imgavatar1.jpg" alt="avatar1" class="avatarimg">
+   <div class="containervideomobile md:containervideo ">
+      <img src="img/1.jpg" alt="draft1" class="w-1/3 box-border h-auto rounded-lg mr-4
+       md:videoimg">
+      <div class="w-3/5 md:flex md:w-full md:flex-wrap">
+      
+      <h3 class="font-bold md:w-full">Big 4 Auditor Financial Analyst</h3>
+      <p class="hidden md:flex">Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik</p>
+      
+        <img src="img/avatar1.png" alt="avatar1" class="avatarimg rounded-lg">
+        <div>
+        <h4>Jenna Ortega</h4>
+        <p>Senior Accountant di <span class="font-semibold">gojek</span></p>
+        </div>
+        </div>
+      <div class="rating-container">
+        <!-- bintang rating -->
+        <div class="rating">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half-stroke"></i>
+          <i class="fa-regular fa-star"></i>
+        </div>
+
+        <!-- angka rating + jumlah review -->
+        <span class="review">3.5 (86)</span>
+
+        <!-- harga -->
+        <span class="price">Rp 300K</span>
+      </div>
+    </div>
+    <div class="containervideomobile md:containervideo ">
+      <img src="img/1.jpg" alt="draft1" class="w-1/3 box-border h-auto rounded-lg mr-4
+       md:videoimg">
+      <div class="w-3/5 md:flex md:w-full md:flex-wrap">
+      
+      <h3 class="font-bold md:w-full">Big 4 Auditor Financial Analyst</h3>
+      <p class="hidden md:flex">Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik</p>
+      
+        <img src="img/avatar1.png" alt="avatar1" class="avatarimg rounded-lg">
         <div>
         <h4>Jenna Ortega</h4>
         <p>Senior Accountant di <span class="font-semibold">gojek</span></p>
@@ -275,12 +349,15 @@
       </div>
     </div>
 
-    <div class="containervideo">
-      <img src="img/1.jpg" alt="draft1" class="videoimg">
-      <h3>Big 4 Auditor Financial Analyst</h3>
-      <p>Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik</p>
-      <div class="profilvid">
-        <img src="imgavatar1.jpg" alt="avatar1" class="avatarimg">
+    <div class="containervideomobile md:containervideo ">
+      <img src="img/1.jpg" alt="draft1" class="w-1/3 box-border h-auto rounded-lg mr-4
+       md:videoimg">
+      <div class="w-3/5 md:flex md:w-full md:flex-wrap">
+      
+      <h3 class="font-bold md:w-full">Big 4 Auditor Financial Analyst</h3>
+      <p class="hidden md:flex">Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik</p>
+      
+        <img src="img/avatar1.png" alt="avatar1" class="avatarimg rounded-lg">
         <div>
         <h4>Jenna Ortega</h4>
         <p>Senior Accountant di <span class="font-semibold">gojek</span></p>
@@ -304,34 +381,6 @@
       </div>
     </div>
 
-    <div class="containervideo">
-      <img src="img/1.jpg" alt="draft1" class="videoimg">
-      <h3>Big 4 Auditor Financial Analyst</h3>
-      <p>Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik</p>
-      <div class="profilvid">
-        <img src="imgavatar1.jpg" alt="avatar1" class="avatarimg">
-        <div>
-        <h4>Jenna Ortega</h4>
-        <p>Senior Accountant di <span class="font-semibold">gojek</span></p>
-        </div>
-        </div>
-      <div class="rating-container">
-        <!-- bintang rating -->
-        <div class="rating">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star-half-stroke"></i>
-          <i class="fa-regular fa-star"></i>
-        </div>
-
-        <!-- angka rating + jumlah review -->
-        <span class="review">3.5 (86)</span>
-
-        <!-- harga -->
-        <span class="price">Rp 300K</span>
-      </div>
-    </div>
 
   </div>
 
@@ -342,14 +391,14 @@
     <div class="relative w-full h-auto flex items-center justify-center">
       <img src="img/newsletter.jpg" alt="Spotlight" class="absolute inset-0 w-full h-full object-cover z-0">
       <div class="absolute inset-0 bg-black bg-opacity-80 z-1"></div>
-      <div class="py-12 w-2/5 relative z-20 text-white text-center px-4">
+      <div class="py-12 md:w-2/5 relative z-20 text-white text-center px-4">
         <h5 class="text-xl  text-lightgray mb-2">NEWSLETTER</h5>
         <h3 class="text-2xl font-bold mb-2">Mau Belajar Lebih Banyak?</h3>
         <p class="text-lg">Daftarkan dirimu untuk mendapatkan informasi terbaru dan penawaran spesial dari program-program terbaik videobelajar.id</p>
         <div class="flex justify-center mt-10">
-        <div class="relative w-80">
-          <input type="text" class="w-full p-2 pr-24 rounded-lg text-black placeholder:text-gray-500 border border-gray-300"placeholder="masukkan emailmu">
-          <button class="absolute top-1/2 right-1 -translate-y-1/2 bg-yellow-500 px-3 py-1 rounded-lg font-bold text-white">
+        <div class="flex justify-center flex-wrap md:relative md:w-80">
+          <input type="text" class="placeholder:text-center md:placeholder:text-start w-full p-2 md:pr-24 rounded-lg text-black placeholder:text-gray-500 border border-gray-300"placeholder="masukkan emailmu">
+          <button class="justify-center flex w-full mt-6 md:w-auto md:m-0 md:absolute md:top-1/2 md:right-1 md:-translate-y-1/2 bg-yellow-500 px-3 py-1 rounded-lg font-bold text-white">
             Subscribe
           </button>
           </div>
@@ -362,81 +411,116 @@
 
 </div>
 <!--footer-->
-<footer class="bg-white mt-12 w-full pt-14 h-auto ">
-<div class="flex justify-between ">
-  <div class="W-1/3 pl-10">
-    <img src="img/logo3.png" alt="" class="w-auto h-16">
-    <div class="w-2/3">
-      <h3 class="mt-6 font-bold text-md text-darkgray">Gali Potensi Anda Melalui Pembelajaran Video di videobelajar.id!</h3>
-      <p class="text-darkgray mt-3">Jl. Usman Effendi No. 50 Lowokwaru, Malang</p>
-      <p class="text-darkgray mt-3">+62-877-7123-1234</p>
-  </div>
-  </div>
-
-  <div class="pr-10 flex justify-evenly w-1/2 margin-10">
-    <div>
-      <h3 class="text-black font-bold text-lg mb-4">Kategori</h3>
-      <ul class="space-y-2 text-darkgray">
-        <li><a href="#" class="hover:underline">Digital & Teknologi</a></li>
-        <li><a href="#" class="hover:underline">Pemasaran</a></li>
-        <li><a href="#" class="hover:underline">Manajemen Bisnis</a></li>
-        <li><a href="#" class="hover:underline">Pengembangan Diri</a></li>
-        <li><a href="#" class="hover:underline">Desain</a></li>
+<footer class="bg-white mt-12 w-full pt-14 h-auto">
+  <div class="flex flex-wrap justify-between lg:flex-nowrap">
+    <!-- Kiri -->
+    <div class="w-full mb-6 pl-4 pr-4 md:mb-0 md:w-1/3 md:pl-10 box-border">
+      <img src="img/logo3.png" alt="" class="w-auto h-16">
+      <div class="md:w-full">
+        <h3 class="mt-6 font-bold text-md text-darkgray">
+          Gali Potensi Anda Melalui Pembelajaran Video di videobelajar.id!
+        </h3>
+        <p class="text-darkgray mt-3">Jl. Usman Effendi No. 50 Lowokwaru, Malang</p>
+        <p class="text-darkgray mt-3">+62-877-7123-1234</p>
+      </div>
     </div>
 
-    <div>
-      <h3 class="text-black font-bold text-lg mb-4">Perusahaan</h3>
-      <ul class="space-y-2 text-darkgray">
-        <li><a href="#" class="hover:underline">Tentang Kami</a></li>
-        <li><a href="#" class="hover:underline">FAQ</a></li>
-        <li><a href="#" class="hover:underline">Kebijakan Privasi</a></li>
-        <li><a href="#" class="hover:underline">Ketentuan Layanan</a></li>
-        <li><a href="#" class="hover:underline">Bantuan</a></li>
-    </div>
+    <!-- Kanan dengan dropdown -->
+    <div class="pl-4 pr-4 md:pr-10 md:flex justify-evenly w-full md:w-1/2">
+      
+      <!-- Kategori -->
+      <div class="w-full md:w-auto mb-4 md:mb-0">
+        <button class="w-full flex justify-between items-center text-black font-bold text-lg mb-2 md:mb-4 md:cursor-default dropdown-btn">
+          Kategori
+          <span class="md:hidden">▼</span>
+        </button>
+        <ul class="hidden md:block space-y-2 text-darkgray dropdown-content">
+          <li><a href="#" class="hover:underline">Digital & Teknologi</a></li>
+          <li><a href="#" class="hover:underline">Pemasaran</a></li>
+          <li><a href="#" class="hover:underline">Manajemen Bisnis</a></li>
+          <li><a href="#" class="hover:underline">Pengembangan Diri</a></li>
+          <li><a href="#" class="hover:underline">Desain</a></li>
+        </ul>
+      </div>
 
-    <div>
-      <h3 class="text-black font-bold text-lg mb-4">Komunitas</h3>
-      <ul class="space-y-2 text-darkgray">
-        <li><a href="#" class="hover:underline">Tips Sukses</a></li>
-        <li><a href="#" class="hover:underline">Blog</a></li>
+      <!-- Perusahaan -->
+      <div class="w-full md:w-auto mb-4 md:mb-0">
+        <button class="w-full flex justify-between items-center text-black font-bold text-lg mb-2 md:mb-4 md:cursor-default dropdown-btn">
+          Perusahaan
+          <span class="md:hidden">▼</span>
+        </button>
+        <ul class="hidden md:block space-y-2 text-darkgray dropdown-content">
+          <li><a href="#" class="hover:underline">Tentang Kami</a></li>
+          <li><a href="#" class="hover:underline">FAQ</a></li>
+          <li><a href="#" class="hover:underline">Kebijakan Privasi</a></li>
+          <li><a href="#" class="hover:underline">Ketentuan Layanan</a></li>
+          <li><a href="#" class="hover:underline">Bantuan</a></li>
+        </ul>
+      </div>
+
+      <!-- Komunitas -->
+      <div class="w-full md:w-auto">
+        <button class="w-full flex justify-between items-center text-black font-bold text-lg mb-2 md:mb-4 md:cursor-default dropdown-btn">
+          Komunitas
+          <span class="md:hidden">▼</span>
+        </button>
+        <ul class="hidden md:block space-y-2 text-darkgray dropdown-content">
+          <li><a href="#" class="hover:underline">Tips Sukses</a></li>
+          <li><a href="#" class="hover:underline">Blog</a></li>
+        </ul>
+      </div>
     </div>
   </div>
-</div>
-<div class="">
-<hr class="border-t border-gray-300 mt-4">
 
-<div class="flex text-center text-gray-500 text-sm py-4 px-10 justify-between pb-8">
   <div>
-  <p>@2023 Gerobak Sayur All Rights Reserved.</p>
+    <!--credit-->
+  <hr class="border-t border-gray-300 mt-4">
+  <div class="pl-4 flex flex-col-reverse md:flex-row md:text-center text-gray-500 text-sm py-4 md:px-10 justify-between pb-8 items-start">
+    
+    <!-- Copyright -->
+    <div class="mt-4 md:mt-0">
+      <p>@2023 Gerobak Sayur All Rights Reserved.</p>
+    </div>
+
+    <!-- Sosmed -->
+    <div class="flex space-x-4">
+      <!-- LinkedIn -->
+      <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-400 text-gray-600 hover:bg-gray-600 hover:text-white transition">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <!-- Facebook -->
+      <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-400 text-gray-600 hover:bg-gray-600 hover:text-white transition">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <!-- Instagram -->
+      <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-400 text-gray-600 hover:bg-gray-600 hover:text-white transition">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <!-- Twitter -->
+      <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-400 text-gray-600 hover:bg-gray-600 hover:text-white transition">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </div>
+
   </div>
- <div class="flex space-x-4">
-  <!-- LinkedIn -->
-  <a href="#" 
-     class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-400 text-gray-600 hover:bg-gray-600 hover:text-white transition">
-    <i class="fab fa-linkedin-in"></i>
-  </a>
-
-  <!-- Facebook -->
-  <a href="#" 
-     class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-400 text-gray-600 hover:bg-gray-600 hover:text-white transition">
-    <i class="fab fa-facebook-f"></i>
-  </a>
-
-  <!-- Instagram -->
-  <a href="#" 
-     class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-400 text-gray-600 hover:bg-gray-600 hover:text-white transition">
-    <i class="fab fa-instagram"></i>
-  </a>
-
-  <!-- Twitter -->
-  <a href="#" 
-     class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-400 text-gray-600 hover:bg-gray-600 hover:text-white transition">
-    <i class="fab fa-twitter"></i>
-  </a>
 </div>
 
-</div>
-</div>
 </footer>
+<script>
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  hamburgerBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+    // JS buat dropdown di mobile
+  document.querySelectorAll(".dropdown-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const content = btn.nextElementSibling;
+      content.classList.toggle("hidden");
+    });
+  });
+</script>
 </body>
 </html>

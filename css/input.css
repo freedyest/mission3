@@ -14,7 +14,21 @@
         margin-bottom:32px;
         border-radius:8px;
         
-    }.profilvid{
+    }.containervideomobile {
+        display:flex;
+        background-color:white;
+        rounded:3px;
+        overflow:hidden;
+        width:100%;
+        flex-wrap: wrap;
+        height:auto;
+        padding:16px;
+        margin-bottom:32px;
+        border-radius:8px;
+        justify-content: space-between;
+        
+    }
+    .profilvid{
         display:flex;
         width:100%;
         
