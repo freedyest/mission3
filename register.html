@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Video Belajar</title>
+    <link href="css/output.css" rel="stylesheet">
+</head>
+<body class="bg-lightgray">
+  <!--header section-->
+  <header> 
+    <div class="fixed top-0 left-0 w-full bg-white h-auto">
+      <div class="px-14 py-2 flex items-center">
+        <img src="img/logo3.png" alt="Logo" class="h-12 w-auto">
+      </div>
+    </div>
+  </header>
+    <!--main section-->
+  <section id="Register" class="min-h-screen flex items-center justify-center py-36">
+    <div class="bg-white rounded-lg shadow-lg p-8 text-center w-1/2 items-center justify-center">
+            <h1 class="text-3xl">Pendaftaran Akun</h1>
+            <h2 class="text-darkgray text-lg">Yuk, daftarkan akunmu sekarang juga!</h2>
+
+            <div class="mt-8">
+                <form action="/index.html" method="POST" >
+                  <div class="mb-5 text-start">
+                        <label for="nama" class="block text-sm font-medium text-gray-700">Nama Lengkap <span class="text-red-600">*</span></label>
+                        <input type="nama" id="nama" name="nama" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div class="mb-5 text-start">
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email <span class="text-red-600">*</span></label>
+                        <input type="email" id="email" name="email" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div class="mb-5 text-start">
+  <label for="phonenumber" class="block text-sm font-medium text-gray-700">
+    No. HP <span class="text-red-600">*</span>
+  </label>
+  <div class="flex">
+    <!-- Dropdown Kode Negara -->
+    <select id="country-code" name="country-code"
+      class="mt-0 block px-2 py-2 border border-gray-300 rounded-l-md bg-gray-50 text-gray-700 focus:outline-none focus:ring-blue-500 focus:border-blue-500 mr-6">
+      <option value="+62" selected>🇮🇩 +62</option>
+      <option value="+60">🇲🇾 +60</option>
+      <option value="+65">🇸🇬 +65</option>
+      <option value="+1">🇺🇸 +1</option>
+      <option value="+81">🇯🇵 +81</option>
+    </select>
+
+    <!-- Input Nomor HP -->
+    <input type="tel" id="phonenumber" name="phonenumber" required
+      class="mt-0 block w-full px-3 py-2 border border-gray-300 rounded-r-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+        </div>
+      </div>
+
+                    <div class="mb-5 text-start">
+                        <label for="password" class="block text-sm font-medium text-gray-700">Password <span class="text-red-600">*</span></label>
+                        <input type="password" id="password" name="password" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div class="mb-5 text-start">
+                        <label for="confirm" class="block text-sm font-medium text-gray-700">Konfirmasi Password <span class="text-red-600">*</span></label>
+                        <input type="password" id="confirm" name="confirm" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div class="mb-5 text-end">
+                        <a href="#" class="text-darkgray hover:underline text-md">lupa password?</a>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full font-bold bg-green-400 text-white py-2 px-4 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 mb-8">Daftar</button>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full font-bold bg-green-200 text-green-400 py-2 px-4 rounded-md hover:bg-green-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Masuk</button>
+                    </div>
+                </form>
+                <div class="flex items-center my-6">
+                <hr class="flex-grow border-gray-300">
+                <span class="px-3 text-gray-500 text-sm">atau</span>
+                <hr class="flex-grow border-gray-300">
+                </div>
+               <button class="flex justify-center items-center w-full font-bold bg-white text-darkgray py-2 px-4 rounded-md hover:bg-slate-400 mb-4 border border-darkgray">
+                <img src="img/fb.png" alt="Facebook" class="h-10 w-10 mr-2">
+                <span>Daftar dengan Facebook</span>
+                </button>
+
+                <button class="flex justify-center items-center w-full font-bold bg-white text-darkgray py-2 px-4 rounded-md hover:bg-slate-400 border border-darkgray">
+                <img src="img/google.png" alt="Google" class="h-10 w-10 mr-2">
+                <span>Daftar dengan Google</span>
+                </button>
+
+    </div>
+  </section>
+</body>
+
+</html>
