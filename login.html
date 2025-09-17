@@ -27,10 +27,23 @@
                         <label for="email" class="block text-sm font-medium text-gray-700">Email <span class="text-red-600">*</span></label>
                         <input type="email" id="email" name="email" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
                     </div>
-                    <div class="mb-5 text-start">
-                        <label for="password" class="block text-sm font-medium text-gray-700">Password <span class="text-red-600">*</span></label>
-                        <input type="password" id="password" name="password" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+
+                     <div class="mb-5 text-start">
+                      <label for="password" class="block text-sm font-medium text-gray-700">
+                        Kata Sandi <span class="text-red-600">*</span>
+                      </label>
+                      <div
+                        class="flex justify-between w-full border border-gray-300 rounded-md shadow-sm focus-within:ring-2 focus-within:ring-blue-500">
+                        <input type="password" id="password" name="password"
+                          class="flex-1 px-3 py-2 focus:outline-none rounded-l-md"
+                          placeholder="">
+                        <button type="button" onclick="togglePassword('password','iconPassword')" class="px-3">
+                          <img id="iconPassword" src="img/eyesoff.png" alt="toggle password" class="w-5 h-5">
+                        </button>
+                      </div>
                     </div>
+
+
                     <div class="mb-5 text-end">
                         <a href="#" class="text-darkgray hover:underline text-md">lupa password?</a>
                     </div>
@@ -58,6 +71,22 @@
 
     </div>
   </section>
+  <script>
+    
+ function togglePassword(inputId, iconId) {
+  const input = document.getElementById(inputId);
+  const icon = document.getElementById(iconId);
+
+  if (input.type === "password") {
+    input.type = "text";
+    icon.src = "img/eyeson.png"; 
+  } else {
+    input.type = "password";
+    icon.src = "img/eyesoff.png"; 
+  }
+}
+
+  </script>
 </body>
 
 </html>
