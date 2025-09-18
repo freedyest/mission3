@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register Video Belajar</title>
-    <link href="css/output.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register Video Belajar</title>
+  <link href="css/output.css" rel="stylesheet">
 </head>
 <body class="bg-lightgray">
   <!--header section-->
@@ -15,167 +15,169 @@
       </div>
     </div>
   </header>
-    <!--main section-->
+
+  <!--main section-->
   <section id="Register" class="min-h-screen flex items-center justify-center py-36">
     <div class="bg-white rounded-lg shadow-lg p-8 text-center w-5/6 lg:w-1/2 items-center justify-center">
-            <h1 class="text-3xl font-bold">Pendaftaran Akun</h1>
-            <h2 class="text-darkgray text-lg">Yuk, daftarkan akunmu sekarang juga!</h2>
+      <h1 class="text-3xl font-bold">Pendaftaran Akun</h1>
+      <h2 class="text-darkgray text-lg">Yuk, daftarkan akunmu sekarang juga!</h2>
 
-            <div class="mt-8">
-                <form action="/index.html" method="POST" >
-                  <div class="mb-5 text-start">
-                        <label for="nama" class="block text-sm font-medium text-gray-700">Nama Lengkap <span class="text-red-600">*</span></label>
-                        <input type="nama" id="nama" name="nama" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-                    </div>
-                    <div class="mb-5 text-start">
-                        <label for="email" class="block text-sm font-medium text-gray-700">Email <span class="text-red-600">*</span></label>
-                        <input type="email" id="email" name="email" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-                    </div>
+      <div class="mt-8">
+        <!-- Input nama -->
+        <div class="mb-5 text-start">
+          <label for="nama" class="block text-sm font-medium text-gray-700">Nama Lengkap <span class="text-red-600">*</span></label>
+          <input type="text" id="nama" name="nama" required 
+            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+        </div>
 
-                    <div class="mb-5 text-start">
-                      <label for="phonenumber" class="block text-sm font-medium text-gray-700">
-                        No. HP <span class="text-red-600">*</span>
-                      </label>
-                      <div class="flex">
-                        <!-- Custom Dropdown -->
-                        <div class="relative w-32 mr-8">
-                          
-                          <button id="dropdownButton"
-                            class="flex items-center justify-between w-full border border-gray-300 rounded-l-md px-2 py-2 bg-white">
-                            <span class="flex items-center">
-                              <img src="https://flagcdn.com/w20/id.png" class="w-5 h-4 mr-2"> +62
-                            </span>
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M19 9l-7 7-7-7" />
-                            </svg>
-                          </button>
-                          <!-- Dropdown list -->
-                          <ul id="dropdownMenu"
-                            class="z-50 absolute left-0 mt-1 w-full bg-white border rounded-md shadow-lg hidden ">
-                            <li data-code="+62" class="flex items-center px-2 py-1 hover:bg-gray-100 cursor-pointer">
-                              <img src="https://flagcdn.com/w20/id.png" class="w-5 h-4 mr-2"> +62
-                            </li>
-                            <li data-code="+60" class="flex items-center px-2 py-1 hover:bg-gray-100 cursor-pointer">
-                              <img src="https://flagcdn.com/w20/my.png" class="w-5 h-4 mr-2"> +60
-                            </li>
-                            <li data-code="+65" class="flex items-center px-2 py-1 hover:bg-gray-100 cursor-pointer">
-                              <img src="https://flagcdn.com/w20/sg.png" class="w-5 h-4 mr-2"> +65
-                            </li>
-                            <li data-code="+1" class="flex items-center px-2 py-1 hover:bg-gray-100 cursor-pointer">
-                              <img src="https://flagcdn.com/w20/us.png" class="w-5 h-4 mr-2"> +1
-                            </li>
-                          </ul>
-                        </div>
-                        <!-- Input Nomor HP -->
-                        <input type="tel" id="phonenumber" name="phonenumber" required
-                          class="block w-full px-3 py-2 border border-gray-300 rounded-r-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-                      </div>
-                    </div>
-                                      
-                    <!-- Password -->
-                    <div class="mb-5 text-start">
-                      <label for="password" class="block text-sm font-medium text-gray-700">
-                        Kata Sandi <span class="text-red-600">*</span>
-                      </label>
-                      <div
-                        class="flex justify-between w-full border border-gray-300 rounded-md shadow-sm focus-within:ring-2 focus-within:ring-blue-500">
-                        <input type="password" id="password" name="password"
-                          class="flex-1 px-3 py-2 focus:outline-none rounded-l-md"
-                          placeholder="">
-                        <button type="button" onclick="togglePassword('password','iconPassword')" class="px-3">
-                          <img id="iconPassword" src="img/eyesoff.png" alt="toggle password" class="w-5 h-5">
-                        </button>
-                      </div>
-                    </div>
+        <!-- Input email -->
+        <div class="mb-5 text-start">
+          <label for="email" class="block text-sm font-medium text-gray-700">Email <span class="text-red-600">*</span></label>
+          <input type="email" id="email" name="email" required 
+            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+        </div>
 
-                    <!-- Konfirmasi Password -->
-                    <div class="mb-5 text-start">
-                      <label for="confirm" class="block text-sm font-medium text-gray-700">
-                        Konfirmasi Kata Sandi <span class="text-red-600">*</span>
-                      </label>
-                      <div
-                        class="flex justify-between w-full items-center border border-gray-300 rounded-md shadow-sm focus-within:ring-2 focus-within:ring-blue-500">
-                        <input type="password" id="confirm" name="confirm"
-                          class="flex-1 px-3 py-2 focus:outline-none rounded-l-md"
-                          placeholder="">
-                        <button type="button" onclick="togglePassword('confirm','iconConfirm')" class="px-3">
-                          <img id="iconConfirm" src="img/eyesoff.png" alt="toggle password" class="w-5 h-5">
-                        </button>
-                      </div>
-                    </div>
+        <!-- Nomor HP + Dropdown -->
+        <div class="mb-5 text-start">
+          <label for="phonenumber" class="block text-sm font-medium text-gray-700">No. HP <span class="text-red-600">*</span></label>
+          <div class="flex">
+            <div class="relative w-32 mr-8">
+              <button id="dropdownButton"
+                class="flex items-center justify-between w-full border border-gray-300 rounded-l-md px-2 py-2 bg-white">
+                <span class="flex items-center">
+                  <img src="https://flagcdn.com/w20/id.png" class="w-5 h-4 mr-2"> +62
+                </span>
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <!-- Dropdown list -->
+              <ul id="dropdownMenu" class="z-50 absolute left-0 mt-1 w-full bg-white border rounded-md shadow-lg hidden">
+                <li data-code="+62" class="flex items-center px-2 py-1 hover:bg-gray-100 cursor-pointer">
+                  <img src="https://flagcdn.com/w20/id.png" class="w-5 h-4 mr-2"> +62
+                </li>
+                <li data-code="+60" class="flex items-center px-2 py-1 hover:bg-gray-100 cursor-pointer">
+                  <img src="https://flagcdn.com/w20/my.png" class="w-5 h-4 mr-2"> +60
+                </li>
+                <li data-code="+65" class="flex items-center px-2 py-1 hover:bg-gray-100 cursor-pointer">
+                  <img src="https://flagcdn.com/w20/sg.png" class="w-5 h-4 mr-2"> +65
+                </li>
+                <li data-code="+1" class="flex items-center px-2 py-1 hover:bg-gray-100 cursor-pointer">
+                  <img src="https://flagcdn.com/w20/us.png" class="w-5 h-4 mr-2"> +1
+                </li>
+              </ul>
+            </div>
+            <input type="tel" id="phonenumber" name="phonenumber" required
+              class="block w-full px-3 py-2 border border-gray-300 rounded-r-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+          </div>
+        </div>
 
-                    <div class="mb-5 text-end">
-                        <a href="#" class="text-darkgray hover:underline text-md">lupa password?</a>
-                    </div>
-                    <div>
-                        <button type="submit" class="w-full font-bold bg-green-400 text-white py-2 px-4 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 mb-8">Daftar</button>
-                    </div>
-                    <div>
-                        <button type="submit" class="w-full font-bold bg-green-200 text-green-400 py-2 px-4 rounded-md hover:bg-green-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Masuk</button>
-                    </div>
-                </form>
-                <div class="flex items-center my-6">
-                <hr class="flex-grow border-gray-300">
-                <span class="px-3 text-gray-500 text-sm">atau</span>
-                <hr class="flex-grow border-gray-300">
-                </div>
+        <!-- Password -->
+        <div class="mb-5 text-start">
+          <label for="password" class="block text-sm font-medium text-gray-700">Kata Sandi <span class="text-red-600">*</span></label>
+          <div class="flex justify-between w-full border border-gray-300 rounded-md shadow-sm focus-within:ring-2 focus-within:ring-blue-500">
+            <input type="password" id="password" name="password" class="flex-1 px-3 py-2 focus:outline-none rounded-l-md">
+            <button type="button" onclick="togglePassword('password','iconPassword')" class="px-3">
+              <img id="iconPassword" src="img/eyesoff.png" alt="toggle password" class="w-5 h-5">
+            </button>
+          </div>
+        </div>
 
-               <button class="flex justify-center items-center w-full font-bold bg-white text-darkgray py-2 px-4 rounded-md hover:bg-slate-400 mb-4 border border-darkgray">
-                <img src="img/fb.png" alt="Facebook" class="h-10 w-10 mr-2">
-                <span>Daftar dengan Facebook</span>
-                </button>
+        <!-- Konfirmasi Password -->
+        <div class="mb-5 text-start">
+          <label for="confirm" class="block text-sm font-medium text-gray-700">Konfirmasi Kata Sandi <span class="text-red-600">*</span></label>
+          <div class="flex justify-between w-full items-center border border-gray-300 rounded-md shadow-sm focus-within:ring-2 focus-within:ring-blue-500">
+            <input type="password" id="confirm" name="confirm" class="flex-1 px-3 py-2 focus:outline-none rounded-l-md">
+            <button type="button" onclick="togglePassword('confirm','iconConfirm')" class="px-3">
+              <img id="iconConfirm" src="img/eyesoff.png" alt="toggle password" class="w-5 h-5">
+            </button>
+          </div>
+        </div>
 
-                <button class="flex justify-center items-center w-full font-bold bg-white text-darkgray py-2 px-4 rounded-md hover:bg-slate-400 border border-darkgray">
-                <img src="img/google.png" alt="Google" class="h-10 w-10 mr-2">
-                <span>Daftar dengan Google</span>
-                </button>
+        <!-- Tombol -->
+        <div class="mb-5 text-end">
+          <a href="#" class="text-darkgray hover:underline text-md">Lupa password?</a>
+        </div>
+
+        <!-- Daftar -->
+        <div>
+          <button type="button"
+            onclick="window.location.href='index.html'"
+            class="w-full font-bold bg-green-400 text-white py-2 px-4 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 mb-8">
+            Daftar
+          </button>
+        </div>
+
+        <!-- Masuk -->
+        <div>
+          <button type="button"
+            onclick="window.location.href='login.html'"
+            class="w-full font-bold bg-green-200 text-green-400 py-2 px-4 rounded-md hover:bg-green-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+            Masuk
+          </button>
+        </div>
+
+        <!-- Atau -->
+        <div class="flex items-center my-6">
+          <hr class="flex-grow border-gray-300">
+          <span class="px-3 text-gray-500 text-sm">atau</span>
+          <hr class="flex-grow border-gray-300">
+        </div>
+
+        <!-- Sosmed -->
+        <button class="flex justify-center items-center w-full font-bold bg-white text-darkgray py-2 px-4 rounded-md hover:bg-slate-400 mb-4 border border-darkgray">
+          <img src="img/fb.png" alt="Facebook" class="h-10 w-10 mr-2">
+          <span>Daftar dengan Facebook</span>
+        </button>
+
+        <button class="flex justify-center items-center w-full font-bold bg-white text-darkgray py-2 px-4 rounded-md hover:bg-slate-400 border border-darkgray">
+          <img src="img/google.png" alt="Google" class="h-10 w-10 mr-2">
+          <span>Daftar dengan Google</span>
+        </button>
+      </div>
     </div>
   </section>
 
   <script>
- function togglePassword(inputId, iconId) {
-  const input = document.getElementById(inputId);
-  const icon = document.getElementById(iconId);
+    function togglePassword(inputId, iconId) {
+      const input = document.getElementById(inputId);
+      const icon = document.getElementById(iconId);
 
-  if (input.type === "password") {
-    input.type = "text";
-    icon.src = "img/eyeson.png"; 
-  } else {
-    input.type = "password";
-    icon.src = "img/eyesoff.png"; 
-  }
-}
+      if (input.type === "password") {
+        input.type = "text";
+        icon.src = "img/eyeson.png"; 
+      } else {
+        input.type = "password";
+        icon.src = "img/eyesoff.png"; 
+      }
+    }
 
-// Dropdown kode negara
-const dropdownButton = document.getElementById("dropdownButton");
-const dropdownMenu = document.getElementById("dropdownMenu");
+    // Dropdown kode negara
+    const dropdownButton = document.getElementById("dropdownButton");
+    const dropdownMenu = document.getElementById("dropdownMenu");
 
-dropdownButton.addEventListener("click", (e) => {
-  e.stopPropagation(); // biar gak langsung ketutup
-  dropdownMenu.classList.toggle("hidden");
-});
+    dropdownButton.addEventListener("click", (e) => {
+      e.stopPropagation();
+      dropdownMenu.classList.toggle("hidden");
+    });
 
-dropdownMenu.querySelectorAll("li").forEach(item => {
-  item.addEventListener("click", () => {
-    dropdownButton.innerHTML = `
-      <span class="flex items-center">
-        ${item.innerHTML}
-      </span>
-      <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-      </svg>
-    `;
-    dropdownMenu.classList.add("hidden");
-  });
-});
+    dropdownMenu.querySelectorAll("li").forEach(item => {
+      item.addEventListener("click", () => {
+        dropdownButton.innerHTML = `
+          <span class="flex items-center">
+            ${item.innerHTML}
+          </span>
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        `;
+        dropdownMenu.classList.add("hidden");
+      });
+    });
 
-// Klik di luar menutup dropdown
-window.addEventListener("click", () => {
-  dropdownMenu.classList.add("hidden");
-});
-
-</script>
+    window.addEventListener("click", () => {
+      dropdownMenu.classList.add("hidden");
+    });
+  </script>
 </body>
-
 </html>
