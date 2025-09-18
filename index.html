@@ -11,7 +11,7 @@
 <div class="px-2 md:px-10">
 <!--header-->
 <header class="bg-white fixed top-0 left-0 z-50 w-full">
-  <div class="container mx-auto flex items-center justify-between px-4 h-14">
+  <div class="container mx-auto flex items-center justify-between px-4 h-16">
     
     <!-- Logo + Navbar -->
     <div class="flex items-center gap-8">
@@ -27,23 +27,30 @@
       </nav>
     </div>
 
-    <!-- Profil Desktop -->
-    <div class="hidden md:flex items-center gap-2 relative dropdownprofil-btn cursor-pointer">
-      <a href="#profil" class="text-gray-700 font-medium hover:underline">Profil</a>
-      <img src="img/pp.png" alt="profil" class="h-10 w-10 rounded-lg object-cover">
-      
-      <!-- Dropdown Menu -->
-      <div class="dropdownprofil-menu hidden absolute right-0 top-full mt-2 bg-white shadow-lg rounded-lg w-50">
-        <ul class="flex flex-col text-gray-700 font-medium">
-          <li>
-            <a href="#profil" class="block px-4 py-2 hover:bg-gray-100">Profil</a>
-          </li>
-          <li>
-            <a href="login.html" class="block px-4 py-2 hover:bg-gray-100 text-red-500 font-semibold">Logout</a>
-          </li>
-        </ul>
+<!-- Profil Desktop -->
+<div id="profilcard" class="hidden md:flex items-center gap-2 cursor-pointer">
+  <!-- Trigger (flex: teks + pp) -->
+  <div class="relative flex items-center gap-2">
+    <a href="#profil" class="text-gray-700 font-medium hover:underline">Profil</a>
+    <img src="img/pp.png" alt="profil" class="h-10 w-10 rounded-lg object-cover">
+  </div>
+
+  <!-- Dropdown Menu -->
+  <div id="dropdownprofil" class="hidden absolute right-0 top-full mt-2 bg-white shadow-lg rounded-lg w-48 z-50">
+    <div class="flex flex-col text-gray-700 font-medium">
+      <div class="flex p-1 justify-center items-center">
+        <img src="img/pp.png" alt="profil" class="h-6 w-6 rounded-lg object-cover">
+        <a href="#profil" class="block px-4 py-2 hover:bg-gray-100">Profil </a>
+        
+      </div>
+      <div>
+        <a href="login.html" class="block px-4 py-2 hover:bg-gray-100 text-red-500 font-semibold">
+          Logout
+        </a>
       </div>
     </div>
+  </div>
+</div>
 
     <!-- Hamburger Mobile -->
     <div class="md:hidden flex items-center">
@@ -63,11 +70,13 @@
       <div class="flex items-center gap-2 pt-2 border-b border-gray-200">
         <a href="#profil" class="text-gray-700 font-medium hover:underline">Profil</a>
         <img src="img/pp.png" alt="profil" class="h-10 w-10 rounded-lg object-cover">
+         
       </div>
       <a href="#home" class="text-gray-700 font-medium hover:underline">Home</a>
       <a href="#project" class="text-gray-700 font-medium hover:underline">Project</a>
       <a href="#about" class="text-gray-700 font-medium hover:underline">About</a>
       <a href="#contact" class="text-gray-700 font-medium hover:underline">Contact</a>
+      <a href="login.html" class="block px-4 py-2 hover:bg-gray-100 text-red-500 font-semibold">Logout</a>
     </nav>
   </div>
 </header>
@@ -106,9 +115,114 @@
 </section>
 <!--video course-->
 <section id="videocourse" class="w-full mt-10"> 
-  <div class="w-full md:flex flex-wrap justify-between desain">
-    <div class="containervideomobile md:containervideo ">
-      <img src="img/1.jpg" alt="draft1" class="w-1/3 box-border h-auto rounded-lg mr-4
+  <div class="w-full md:flex flex-wrap justify-start gap-6 ">
+    <div class="containervideomobile md:containervideo bisnis">
+      <img src="img/1.jpg" alt="draft1" class="w-1/3 box-border h-auto rounded-lg 
+       md:videoimg">
+      <div class="w-3/5 md:flex md:w-full md:flex-wrap">
+      
+      <h3 class="font-bold md:w-full">Big 4 Auditor Financial Analyst</h3>
+      <p class="hidden md:flex">Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik</p>
+        <div class="flex md:my-2">
+        <img src="img/avatar1.png" alt="avatar1" class="avatarimg rounded-lg ">
+          <div>
+          <h4>Jenna Ortega</h4>
+          <p>Senior Accountant di <span class="font-semibold">gojek</span></p>
+          </div>
+        </div>
+
+      <div class="rating-container">
+        <!-- bintang rating -->
+        <div class="rating">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half-stroke"></i>
+          <i class="fa-regular fa-star"></i>
+        </div>
+
+        <!-- angka rating + jumlah review -->
+        <span class="review">3.5 (86)</span>
+
+        <!-- harga -->
+        <span class="price">Rp 300K</span>
+      </div>
+    </div>
+    </div>
+    <div class="containervideomobile md:containervideo desain">
+      <img src="img/2.jpg" alt="draft1" class="w-1/3 box-border h-auto rounded-lg  md:videoimg">
+      <div class="w-3/5 md:flex md:w-full md:flex-wrap">
+        <h3 class="font-bold md:w-full">Beginner Design course</h3>
+        <p class="hidden md:flex">Mulai transformasi dengan instruktur profesional dengan harga terjangkau dan kurikulum terbaik</p>
+        <img src="img/avatar1.png" alt="avatar1" class="avatarimg rounded-lg">
+        <div>
+          <h4>Jenna Ortega</h4>
+          <p>Senior Accountant di <span class="font-semibold">gojek</span></p>
+        </div>
+      </div>
+      <div class="rating-container">
+        <div class="rating">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half-stroke"></i>
+          <i class="fa-regular fa-star"></i>
+        </div>
+        <span class="review">3.5 (86)</span>
+        <span class="price">Rp 300K</span>
+      </div>
+    </div>
+
+    
+    <div class="containervideomobile md:containervideo pemasaran">
+      <img src="img/3.jpg" alt="draft1" class="w-1/3 box-border h-auto rounded-lg  md:videoimg">
+      <div class="w-3/5 md:flex md:w-full md:flex-wrap">
+        <h3 class="font-bold md:w-full">Digital Marketing Strategy</h3>
+        <p class="hidden md:flex">Belajar strategi pemasaran digital dengan harga terjangkau dan tutor profesional serta kurikulum terbaik</p>
+        <img src="img/avatar1.png" alt="avatar1" class="avatarimg rounded-lg">
+        <div>
+          <h4>Michael Chen</h4>
+          <p>Marketing Manager di <span class="font-semibold">Tokopedia</span></p>
+        </div>
+      </div>
+      <div class="rating-container">
+        <div class="rating">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+        </div>
+        <span class="review">3.0 (54)</span>
+        <span class="price">Rp 250K</span>
+      </div>
+    </div>
+
+    <div class="containervideomobile md:containervideo bisnis">
+      <img src="img/1.jpg" alt="draft1" class="w-1/3 box-border h-auto rounded-lg mr-4 md:videoimg">
+      <div class="w-3/5 md:flex md:w-full md:flex-wrap">
+        <h3 class="font-bold md:w-full">Bisnis Digital for Beginner</h3>
+        <p class="hidden md:flex">Strategi bisnis modern untuk pemula serta dapatka harga terjangkau , tutor terbaik dan kurikulum terbaik...</p>
+        <img src="img/avatar1.png" alt="avatar1" class="avatarimg rounded-lg">
+        <div>
+          <h4>Siti Rahma</h4>
+          <p>Founder di <span class="font-semibold">StartupX</span></p>
+        </div>
+      </div>
+      <div class="rating-container">
+        <div class="rating">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+        </div>
+        <span class="review">4.0 (120)</span>
+        <span class="price">Rp 400K</span>
+      </div>
+    </div>
+    <div class="containervideomobile md:containervideo bisnis">
+      <img src="img/1.jpg" alt="draft1" class="w-1/3 box-border h-auto rounded-lg 
        md:videoimg">
       <div class="w-3/5 md:flex md:w-full md:flex-wrap">
       
@@ -139,12 +253,11 @@
       </div>
     </div>
     
-    <!-- contoh video kategori desain -->
     <div class="containervideomobile md:containervideo desain">
-      <img src="img/1.jpg" alt="draft1" class="w-1/3 box-border h-auto rounded-lg  md:videoimg">
+      <img src="img/2.jpg" alt="draft1" class="w-1/3 box-border h-auto rounded-lg  md:videoimg">
       <div class="w-3/5 md:flex md:w-full md:flex-wrap">
-        <h3 class="font-bold md:w-full">Big 4 Auditor Financial Analyst</h3>
-        <p class="hidden md:flex">Mulai transformasi dengan instruktur profesional...</p>
+        <h3 class="font-bold md:w-full">Beginner Design course</h3>
+        <p class="hidden md:flex">Mulai transformasi dengan instruktur profesional dengan harga terjangkau dan kurikulum terbaik</p>
         <img src="img/avatar1.png" alt="avatar1" class="avatarimg rounded-lg">
         <div>
           <h4>Jenna Ortega</h4>
@@ -164,12 +277,12 @@
       </div>
     </div>
 
-    <!-- contoh video kategori pemasaran -->
+    
     <div class="containervideomobile md:containervideo pemasaran">
-      <img src="img/1.jpg" alt="draft1" class="w-1/3 box-border h-auto rounded-lg mr-4 md:videoimg">
+      <img src="img/3.jpg" alt="draft1" class="w-1/3 box-border h-auto rounded-lg  md:videoimg">
       <div class="w-3/5 md:flex md:w-full md:flex-wrap">
         <h3 class="font-bold md:w-full">Digital Marketing Strategy</h3>
-        <p class="hidden md:flex">Belajar strategi pemasaran digital...</p>
+        <p class="hidden md:flex">Belajar strategi pemasaran digital dengan harga terjangkau dan tutor profesional serta kurikulum terbaik</p>
         <img src="img/avatar1.png" alt="avatar1" class="avatarimg rounded-lg">
         <div>
           <h4>Michael Chen</h4>
@@ -189,12 +302,11 @@
       </div>
     </div>
 
-    <!-- contoh video kategori bisnis -->
     <div class="containervideomobile md:containervideo bisnis">
       <img src="img/1.jpg" alt="draft1" class="w-1/3 box-border h-auto rounded-lg mr-4 md:videoimg">
       <div class="w-3/5 md:flex md:w-full md:flex-wrap">
-        <h3 class="font-bold md:w-full">Bisnis Digital 101</h3>
-        <p class="hidden md:flex">Strategi bisnis modern untuk pemula...</p>
+        <h3 class="font-bold md:w-full">Bisnis Digital for Beginner</h3>
+        <p class="hidden md:flex">Strategi bisnis modern untuk pemula serta dapatka harga terjangkau , tutor terbaik dan kurikulum terbaik...</p>
         <img src="img/avatar1.png" alt="avatar1" class="avatarimg rounded-lg">
         <div>
           <h4>Siti Rahma</h4>
@@ -214,135 +326,7 @@
       </div>
     </div>
 
-    <div class="containervideomobile md:containervideo ">
-      <img src="img/1.jpg" alt="draft1" class="w-1/3 box-border h-auto rounded-lg mr-4
-       md:videoimg">
-      <div class="w-3/5 md:flex md:w-full md:flex-wrap">
-      
-      <h3 class="font-bold md:w-full">Big 4 Auditor Financial Analyst</h3>
-      <p class="hidden md:flex">Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik</p>
-      
-        <img src="img/avatar1.png" alt="avatar1" class="avatarimg rounded-lg">
-        <div>
-        <h4>Jenna Ortega</h4>
-        <p>Senior Accountant di <span class="font-semibold">gojek</span></p>
-        </div>
-        </div>
-      <div class="rating-container">
-        <!-- bintang rating -->
-        <div class="rating">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star-half-stroke"></i>
-          <i class="fa-regular fa-star"></i>
-        </div>
-
-        <!-- angka rating + jumlah review -->
-        <span class="review">3.5 (86)</span>
-
-        <!-- harga -->
-        <span class="price">Rp 300K</span>
-      </div>
-    </div>
-
-    <div class="containervideomobile md:containervideo ">
-      <img src="img/1.jpg" alt="draft1" class="w-1/3 box-border h-auto rounded-lg mr-4
-       md:videoimg">
-      <div class="w-3/5 md:flex md:w-full md:flex-wrap">
-      
-      <h3 class="font-bold md:w-full">Big 4 Auditor Financial Analyst</h3>
-      <p class="hidden md:flex">Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik</p>
-      
-        <img src="img/avatar1.png" alt="avatar1" class="avatarimg rounded-lg">
-        <div>
-        <h4>Jenna Ortega</h4>
-        <p>Senior Accountant di <span class="font-semibold">gojek</span></p>
-        </div>
-        </div>
-      <div class="rating-container">
-        <!-- bintang rating -->
-        <div class="rating">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star-half-stroke"></i>
-          <i class="fa-regular fa-star"></i>
-        </div>
-
-        <!-- angka rating + jumlah review -->
-        <span class="review">3.5 (86)</span>
-
-        <!-- harga -->
-        <span class="price">Rp 300K</span>
-      </div>
-    </div>
-
-   <div class="containervideomobile md:containervideo ">
-      <img src="img/1.jpg" alt="draft1" class="w-1/3 box-border h-auto rounded-lg mr-4
-       md:videoimg">
-      <div class="w-3/5 md:flex md:w-full md:flex-wrap">
-      
-      <h3 class="font-bold md:w-full">Big 4 Auditor Financial Analyst</h3>
-      <p class="hidden md:flex">Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik</p>
-      
-        <img src="img/avatar1.png" alt="avatar1" class="avatarimg rounded-lg">
-        <div>
-        <h4>Jenna Ortega</h4>
-        <p>Senior Accountant di <span class="font-semibold">gojek</span></p>
-        </div>
-        </div>
-      <div class="rating-container">
-        <!-- bintang rating -->
-        <div class="rating">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star-half-stroke"></i>
-          <i class="fa-regular fa-star"></i>
-        </div>
-
-        <!-- angka rating + jumlah review -->
-        <span class="review">3.5 (86)</span>
-
-        <!-- harga -->
-        <span class="price">Rp 300K</span>
-      </div>
-    </div>
-
-    <div class="containervideomobile md:containervideo ">
-      <img src="img/1.jpg" alt="draft1" class="w-1/3 box-border h-auto rounded-lg mr-4
-       md:videoimg">
-      <div class="w-3/5 md:flex md:w-full md:flex-wrap">
-      
-      <h3 class="font-bold md:w-full">Big 4 Auditor Financial Analyst</h3>
-      <p class="hidden md:flex">Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik</p>
-      
-        <img src="img/avatar1.png" alt="avatar1" class="avatarimg rounded-lg">
-        <div>
-        <h4>Jenna Ortega</h4>
-        <p>Senior Accountant di <span class="font-semibold">gojek</span></p>
-        </div>
-        </div>
-      <div class="rating-container">
-        <!-- bintang rating -->
-        <div class="rating">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star-half-stroke"></i>
-          <i class="fa-regular fa-star"></i>
-        </div>
-
-        <!-- angka rating + jumlah review -->
-        <span class="review">3.5 (86)</span>
-
-        <!-- harga -->
-        <span class="price">Rp 300K</span>
-      </div>
-    </div>
-
-    <div class="containervideomobile md:containervideo ">
+    <div class="containervideomobile md:containervideo pengembangan">
       <img src="img/1.jpg" alt="draft1" class="w-1/3 box-border h-auto rounded-lg mr-4
        md:videoimg">
       <div class="w-3/5 md:flex md:w-full md:flex-wrap">
@@ -539,12 +523,21 @@
   });
   //js dropdown profil desktop
 
-document.querySelectorAll(".dropdownprofil-btn").forEach(btn => {
-  btn.addEventListener("click", () => {
-    const menu = btn.querySelector(".dropdownprofil-menu");
-    menu.classList.toggle("hidden");
+  // Dropdown Profil Desktop
+const profilcard = document.getElementById('profilcard');
+const dropdownprofil = document.getElementById('dropdownprofil');
+
+if (profilcard) {
+  profilcard.addEventListener('click', () => {
+    dropdownprofil.classList.toggle('hidden');
+    
   });
-});
+  document.addEventListener('click', (e) => {
+    if (!profilcard.contains(e.target)) {
+      dropdownprofil.classList.add('hidden');
+    }
+  });
+}
 
 </script>
 </body>
