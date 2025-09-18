@@ -1,4 +1,4 @@
-# 📚 VideoBelajar – Responsive Landing Page
+# 📚 VideoBelajar – Responsive Landing Page (Video Belajar)
 
 **VideoBelajar** adalah platform edutech yang menyediakan kumpulan video course on-demand untuk membantu siapa saja belajar mandiri kapan saja, di mana saja.  
 Project ini dibuat sebagai bagian dari **Mission Bootcamp FSD Batch #17 @ Harisenin.com**.
@@ -17,6 +17,7 @@ Terdiri dari:
 ## 🛠️ Tools & Technologies
 - **HTML5** → Struktur halaman.  
 - **CSS3** → Styling dengan Flexbox & Grid.    
+- **JAVASCRIPT** → Buat toggle sederhana.
 - **Figma** → Wireframe & prototype desain.  
 
 ---
@@ -42,7 +43,7 @@ Mission3/
 
 ## 🎨 Design Process
 1. Membuat **wireframe & prototype** di Figma.  
-2. Menentukan **color palette & typography** sesuai tema edutech modern.  
+2. Menentukan **color palette & typography** sesuai tema edutech modern(abu-abu-putih).  
 3. Menerapkan pendekatan **mobile-first** untuk pengalaman pengguna yang optimal.  
 
 ---
