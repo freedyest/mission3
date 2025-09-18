@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./index.html","./login.html","./register.html"],
+  safelist: [
+    "md:inline",
+  ], 
   theme: {
     extend: {
       colors:{
