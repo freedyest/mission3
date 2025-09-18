@@ -64,4 +64,23 @@
       font-size: 18px;
       font-weight: bold;
     }
+    .filter-btn {
+    color: #444A51; 
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  
+  .filter-btn:hover {
+    text-decoration: underline;
+    color: #CEA526; 
+    font-weight: 700;
+  }
+
+  /
+  .filter-btn.active {
+    color: #CEA526; 
+    font-weight: 700;
+    text-decoration: underline;
+  }
 }

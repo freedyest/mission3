@@ -636,6 +636,31 @@ video {
   font-weight: bold;
 }
 
+.filter-btn {
+  color: #444A51;
+  /* darkgray */
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* warna saat hover */
+
+.filter-btn:hover {
+  text-decoration: underline;
+  color: #CEA526;
+  /* goldyellow */
+  font-weight: 700;
+}
+
+/* warna saat aktif */
+
+.filter-btn.active {
+  color: #CEA526;
+  /* goldyellow */
+  font-weight: 700;
+  text-decoration: underline;
+}
+
 .fixed {
   position: fixed;
 }
@@ -1300,15 +1325,6 @@ video {
 .hover\:bg-slate-400:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(148 163 184 / var(--tw-bg-opacity, 1));
-}
-
-.hover\:font-bold:hover {
-  font-weight: 700;
-}
-
-.hover\:text-goldyellow:hover {
-  --tw-text-opacity: 1;
-  color: rgb(206 165 38 / var(--tw-text-opacity, 1));
 }
 
 .hover\:text-white:hover {

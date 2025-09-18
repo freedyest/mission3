@@ -27,13 +27,25 @@
       </nav>
     </div>
 
-    <!-- Profil -->
- <div class="hidden md:flex items-center gap-2">
-    <a href="#profil" class="text-gray-700 font-medium hover:underline">Profil</a>
-  <img src="img/pp.png" alt="profil" class="h-10 w-10 rounded-lg object-cover">
-</div>
+    <!-- Profil Desktop -->
+    <div class="hidden md:flex items-center gap-2 relative dropdownprofil-btn cursor-pointer">
+      <a href="#profil" class="text-gray-700 font-medium hover:underline">Profil</a>
+      <img src="img/pp.png" alt="profil" class="h-10 w-10 rounded-lg object-cover">
+      
+      <!-- Dropdown Menu -->
+      <div class="dropdownprofil-menu hidden absolute right-0 top-full mt-2 bg-white shadow-lg rounded-lg w-50">
+        <ul class="flex flex-col text-gray-700 font-medium">
+          <li>
+            <a href="#profil" class="block px-4 py-2 hover:bg-gray-100">Profil</a>
+          </li>
+          <li>
+            <a href="login.html" class="block px-4 py-2 hover:bg-gray-100 text-red-500 font-semibold">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
 
- <!-- Hamburger Mobile -->
+    <!-- Hamburger Mobile -->
     <div class="md:hidden flex items-center">
       <button id="hamburgerBtn" class="focus:outline-none">
         <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -44,7 +56,9 @@
       </button>
     </div>
   </div>
-    <div id="mobileMenu" class="hidden md:hidden bg-white shadow-md">
+
+  <!-- Menu Mobile -->
+  <div id="mobileMenu" class="hidden md:hidden bg-white shadow-md">
     <nav class="flex flex-col px-4 py-4 gap-4 items-end">
       <div class="flex items-center gap-2 pt-2 border-b border-gray-200">
         <a href="#profil" class="text-gray-700 font-medium hover:underline">Profil</a>
@@ -54,7 +68,6 @@
       <a href="#project" class="text-gray-700 font-medium hover:underline">Project</a>
       <a href="#about" class="text-gray-700 font-medium hover:underline">About</a>
       <a href="#contact" class="text-gray-700 font-medium hover:underline">Contact</a>
-      
     </nav>
   </div>
 </header>
@@ -83,17 +96,17 @@
 </section>
 <!--mininav-->
 <section id="mininav" class="text-darkgray px-2">
-    <nav class="flex flex-wrap items-center gap-8 pt-12 font-semibold text-lg">
-        <a href="#SemuaKelas" class="text-darkgray  font-medium hover:underline hover:text-goldyellow hover:font-bold">SemuaKelas</a>
-        <a href="#Pemasaran" class="text-darkgray font-medium hover:underline hover:text-goldyellow hover:font-bold">Pemasaran</a>
-        <a href="#Desain" class="text-darkgray font-medium hover:underline hover:text-goldyellow hover:font-bold">Desain</a>
-        <a href="#PengembanganDiri" class="text-darkgray font-medium hover:underline hover:text-goldyellow hover:font-bold">PengembanganDiri</a>
-        <a href="#Bisnis" class="text-darkgray font-medium hover:underline hover:text-goldyellow hover:font-bold">Bisnis</a>
-      </nav>
+  <nav class="flex flex-wrap items-center gap-8 pt-12 font-semibold text-lg">
+    <a href="#" data-filter="all" class="filter-btn active">SemuaKelas</a>
+    <a href="#" data-filter="pemasaran" class="filter-btn">Pemasaran</a>
+    <a href="#" data-filter="desain" class="filter-btn">Desain</a>
+    <a href="#" data-filter="pengembangan" class="filter-btn">PengembanganDiri</a>
+    <a href="#" data-filter="bisnis" class="filter-btn">Bisnis</a>
+  </nav>
 </section>
 <!--video course-->
 <section id="videocourse" class="w-full mt-10"> 
-  <div class="w-full md:flex flex-wrap justify-between">
+  <div class="w-full md:flex flex-wrap justify-between desain">
     <div class="containervideomobile md:containervideo ">
       <img src="img/1.jpg" alt="draft1" class="w-1/3 box-border h-auto rounded-lg mr-4
        md:videoimg">
@@ -126,22 +139,19 @@
       </div>
     </div>
     
-    <div class="containervideomobile md:containervideo ">
-      <img src="img/1.jpg" alt="draft1" class="w-1/3 box-border h-auto rounded-lg mr-4
-       md:videoimg">
+    <!-- contoh video kategori desain -->
+    <div class="containervideomobile md:containervideo desain">
+      <img src="img/1.jpg" alt="draft1" class="w-1/3 box-border h-auto rounded-lg  md:videoimg">
       <div class="w-3/5 md:flex md:w-full md:flex-wrap">
-      
-      <h3 class="font-bold md:w-full">Big 4 Auditor Financial Analyst</h3>
-      <p class="hidden md:flex">Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik</p>
-      
+        <h3 class="font-bold md:w-full">Big 4 Auditor Financial Analyst</h3>
+        <p class="hidden md:flex">Mulai transformasi dengan instruktur profesional...</p>
         <img src="img/avatar1.png" alt="avatar1" class="avatarimg rounded-lg">
         <div>
-        <h4>Jenna Ortega</h4>
-        <p>Senior Accountant di <span class="font-semibold">gojek</span></p>
+          <h4>Jenna Ortega</h4>
+          <p>Senior Accountant di <span class="font-semibold">gojek</span></p>
         </div>
-        </div>
+      </div>
       <div class="rating-container">
-        <!-- bintang rating -->
         <div class="rating">
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
@@ -149,76 +159,58 @@
           <i class="fa-solid fa-star-half-stroke"></i>
           <i class="fa-regular fa-star"></i>
         </div>
-
-        <!-- angka rating + jumlah review -->
         <span class="review">3.5 (86)</span>
-
-        <!-- harga -->
         <span class="price">Rp 300K</span>
       </div>
     </div>
 
-    <div class="containervideomobile md:containervideo ">
-      <img src="img/1.jpg" alt="draft1" class="w-1/3 box-border h-auto rounded-lg mr-4
-       md:videoimg">
+    <!-- contoh video kategori pemasaran -->
+    <div class="containervideomobile md:containervideo pemasaran">
+      <img src="img/1.jpg" alt="draft1" class="w-1/3 box-border h-auto rounded-lg mr-4 md:videoimg">
       <div class="w-3/5 md:flex md:w-full md:flex-wrap">
-      
-      <h3 class="font-bold md:w-full">Big 4 Auditor Financial Analyst</h3>
-      <p class="hidden md:flex">Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik</p>
-      
+        <h3 class="font-bold md:w-full">Digital Marketing Strategy</h3>
+        <p class="hidden md:flex">Belajar strategi pemasaran digital...</p>
         <img src="img/avatar1.png" alt="avatar1" class="avatarimg rounded-lg">
         <div>
-        <h4>Jenna Ortega</h4>
-        <p>Senior Accountant di <span class="font-semibold">gojek</span></p>
+          <h4>Michael Chen</h4>
+          <p>Marketing Manager di <span class="font-semibold">Tokopedia</span></p>
         </div>
-        </div>
+      </div>
       <div class="rating-container">
-        <!-- bintang rating -->
         <div class="rating">
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star-half-stroke"></i>
+          <i class="fa-regular fa-star"></i>
           <i class="fa-regular fa-star"></i>
         </div>
-
-        <!-- angka rating + jumlah review -->
-        <span class="review">3.5 (86)</span>
-
-        <!-- harga -->
-        <span class="price">Rp 300K</span>
+        <span class="review">3.0 (54)</span>
+        <span class="price">Rp 250K</span>
       </div>
     </div>
 
-    <div class="containervideomobile md:containervideo ">
-      <img src="img/1.jpg" alt="draft1" class="w-1/3 box-border h-auto rounded-lg mr-4
-       md:videoimg">
+    <!-- contoh video kategori bisnis -->
+    <div class="containervideomobile md:containervideo bisnis">
+      <img src="img/1.jpg" alt="draft1" class="w-1/3 box-border h-auto rounded-lg mr-4 md:videoimg">
       <div class="w-3/5 md:flex md:w-full md:flex-wrap">
-      
-      <h3 class="font-bold md:w-full">Big 4 Auditor Financial Analyst</h3>
-      <p class="hidden md:flex">Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik</p>
-      
+        <h3 class="font-bold md:w-full">Bisnis Digital 101</h3>
+        <p class="hidden md:flex">Strategi bisnis modern untuk pemula...</p>
         <img src="img/avatar1.png" alt="avatar1" class="avatarimg rounded-lg">
         <div>
-        <h4>Jenna Ortega</h4>
-        <p>Senior Accountant di <span class="font-semibold">gojek</span></p>
+          <h4>Siti Rahma</h4>
+          <p>Founder di <span class="font-semibold">StartupX</span></p>
         </div>
-        </div>
+      </div>
       <div class="rating-container">
-        <!-- bintang rating -->
         <div class="rating">
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star-half-stroke"></i>
+          <i class="fa-solid fa-star"></i>
           <i class="fa-regular fa-star"></i>
         </div>
-
-        <!-- angka rating + jumlah review -->
-        <span class="review">3.5 (86)</span>
-
-        <!-- harga -->
-        <span class="price">Rp 300K</span>
+        <span class="review">4.0 (120)</span>
+        <span class="price">Rp 400K</span>
       </div>
     </div>
 
@@ -317,6 +309,7 @@
         <span class="price">Rp 300K</span>
       </div>
     </div>
+
     <div class="containervideomobile md:containervideo ">
       <img src="img/1.jpg" alt="draft1" class="w-1/3 box-border h-auto rounded-lg mr-4
        md:videoimg">
@@ -514,6 +507,29 @@
     mobileMenu.classList.toggle('hidden');
   });
 
+  // Filter video course button
+   const filterBtns = document.querySelectorAll(".filter-btn");
+  const videos = document.querySelectorAll(".containervideomobile");
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener("click", e => {
+      e.preventDefault();
+
+      // pindah highlight
+      filterBtns.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      // filter video
+      const filter = btn.getAttribute("data-filter");
+      videos.forEach(video => {
+        if (filter === "all") {
+          video.style.display = "block";
+        } else {
+          video.style.display = video.classList.contains(filter) ? "block" : "none";
+        }
+      });
+    });
+  });
     // JS buat dropdown di mobile
   document.querySelectorAll(".dropdown-btn").forEach(btn => {
     btn.addEventListener("click", () => {
@@ -521,6 +537,15 @@
       content.classList.toggle("hidden");
     });
   });
+  //js dropdown profil desktop
+
+document.querySelectorAll(".dropdownprofil-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const menu = btn.querySelector(".dropdownprofil-menu");
+    menu.classList.toggle("hidden");
+  });
+});
+
 </script>
 </body>
 </html>
