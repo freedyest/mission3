@@ -35,10 +35,6 @@
     width: 100%;
     height: 180px;
   }
-  .avatarimg {
-    width: 40px;
-    height: auto;
-  }
   .rating-container {
     width: 100%;
     display: flex;
